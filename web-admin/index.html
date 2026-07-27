@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHARE - NGO Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-box">
+                    <svg viewBox="0 0 24 24" class="logo-icon"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#02A95C"/></svg>
+                </div>
+                <h2>SHARE NGO</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-tab="dashboard">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" fill="currentColor"/></svg>
+                    <span>Overview</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="pickups">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/></svg>
+                    <span>Donation Pickups</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="fundraisers">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
+                    <span>Fundraisers</span>
+                </a>
+                <a href="#" class="nav-item" data-tab="volunteers">
+                    <svg viewBox="0 0 24 24" class="nav-icon"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/></svg>
+                    <span>Volunteers</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Jan Manas Foundation</p>
+                <span>v1.0.0</span>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="header-title">
+                    <h1 id="tab-title">Dashboard Overview</h1>
+                    <p id="tab-subtitle">NGO management console and metrics</p>
+                </div>
+                <div class="header-user">
+                    <div class="avatar">AM</div>
+                    <div class="user-info">
+                        <h4>Admin Manager</h4>
+                        <span>NGO Coordinator</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-body">
+                <!-- TAB 1: OVERVIEW -->
+                <section id="tab-dashboard" class="tab-panel active">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon pickups">
+                                <svg viewBox="0 0 24 24" class="icon"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/></svg>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Active Pickups</h3>
+                                <h1 id="count-pickups">2</h1>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon funds">
+                                <svg viewBox="0 0 24 24" class="icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z" fill="currentColor"/></svg>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Funds Raised</h3>
+                                <h1 id="count-funds">₹3,37,000</h1>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon volunteers">
+                                <svg viewBox="0 0 24 24" class="icon"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z" fill="currentColor"/></svg>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Volunteers Active</h3>
+                                <h1 id="count-vols">3</h1>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon campaigns">
+                                <svg viewBox="0 0 24 24" class="icon"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Approve Queue</h3>
+                                <h1 id="count-pending-campaigns">1</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overview-grid">
+                        <div class="overview-panel">
+                            <h3>Quick Actions</h3>
+                            <div class="action-grid">
+                                <button class="action-btn" onclick="switchTab('fundraisers')">Review New Campaigns</button>
+                                <button class="action-btn" onclick="switchTab('pickups')">Manage Pickups</button>
+                                <button class="action-btn" onclick="switchTab('volunteers')">View Volunteer List</button>
+                            </div>
+                        </div>
+                        <div class="overview-panel">
+                            <h3>Live Connection Status</h3>
+                            <div class="status-connection">
+                                <div class="pulse-indicator"></div>
+                                <div>
+                                    <h4>Simulated App Sync: Online</h4>
+                                    <p>Database updates reflect immediately in consumer Android builds.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 2: PICKUPS -->
+                <section id="tab-pickups" class="tab-panel">
+                    <div class="tab-layout">
+                        <div class="list-section">
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Donor</th>
+                                            <th>Address</th>
+                                            <th>Items</th>
+                                            <th>Scheduled Slot</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="pickups-table-body">
+                                        <!-- Dynamic JS Injection -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="detail-panel">
+                            <h3>Route Detail</h3>
+                            <div class="map-mockup">
+                                <div class="map-grid"></div>
+                                <div class="map-marker-donor">📌 Donor</div>
+                                <div class="map-marker-ngo">🏢 NGO Center</div>
+                                <div class="map-route-line"></div>
+                            </div>
+                            <div id="pickup-details-box" class="detail-box">
+                                <p class="placeholder-text">Select a pickup request to view route & map data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 3: FUNDRAISERS -->
+                <section id="tab-fundraisers" class="tab-panel">
+                    <div class="tab-layout">
+                        <div class="list-section">
+                            <div class="section-header">
+                                <h3>Active & Pending Campaigns</h3>
+                            </div>
+                            <div class="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Campaign Title</th>
+                                            <th>Category</th>
+                                            <th>Creator</th>
+                                            <th>Target (₹)</th>
+                                            <th>Raised (₹)</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="fundraisers-table-body">
+                                        <!-- Dynamic JS Injection -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="detail-panel">
+                            <h3>Add Fundraiser directly to App</h3>
+                            <form id="new-fundraiser-form" class="admin-form">
+                                <div class="form-group">
+                                    <label>Campaign Title</label>
+                                    <input type="text" id="fund-title" placeholder="e.g. ₹50,000 for slum children school fees" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Category</label>
+                                        <select id="fund-category">
+                                            <option value="Medical Emergency">Medical Emergency</option>
+                                            <option value="Education">Education</option>
+                                            <option value="Flood Relief">Flood Relief</option>
+                                            <option value="Animal Rescue">Animal Rescue</option>
+                                            <option value="Women Empowerment">Women Empowerment</option>
+                                            <option value="Food Distribution">Food Distribution</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Creator Profile</label>
+                                        <select id="fund-type">
+                                            <option value="Individual">Individual</option>
+                                            <option value="NGO">NGO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Target Amount (₹)</label>
+                                        <input type="number" id="fund-target" placeholder="e.g. 50000" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Location</label>
+                                        <input type="text" id="fund-location" placeholder="e.g. Noida, UP" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Campaign Story</label>
+                                    <textarea id="fund-story" placeholder="Describe the fundraiser story and urgency..." rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">Launch Campaign on App</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TAB 4: VOLUNTEERS -->
+                <section id="tab-volunteers" class="tab-panel">
+                    <div class="volunteer-header-panel">
+                        <div class="filter-box">
+                            <input type="text" id="vol-search" placeholder="Search by name, skills or city...">
+                            <select id="vol-filter-skill">
+                                <option value="All">All Skills</option>
+                                <option value="Teaching">Teaching</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="First Aid">First Aid</option>
+                                <option value="Disaster Relief">Disaster Relief</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Location</th>
+                                            <th>Skills</th>
+                                            <th>Availability</th>
+                                            <th>Hours Logged</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                            </thead>
+                            <tbody id="volunteers-table-body">
+                                <!-- Dynamic JS Injection -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Dynamic Modal Overlay for Certificate preview -->
+    <div id="certificate-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="certificate-frame">
+                <h2>CERTIFICATE OF SERVICE</h2>
+                <p>This is proudly presented to</p>
+                <h1 id="cert-vol-name">Aman Verma</h1>
+                <p>for outstanding dedication and completing</p>
+                <h3 id="cert-vol-hours">24 Hours</h3>
+                <p>of voluntary service with the</p>
+                <h4>JAN MANAS FOUNDATION</h4>
+                <div class="cert-footer">
+                    <span class="signature">NGO Director</span>
+                    <span class="date" id="cert-date">2026-07-16</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
